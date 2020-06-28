@@ -4,7 +4,7 @@ class Series
  attr_accessor :string
 
   def initialize(string)
-		  @string = string.chars
+	 	@string = string.chars
   end
 
  public
