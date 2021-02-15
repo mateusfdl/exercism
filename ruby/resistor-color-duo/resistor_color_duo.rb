@@ -21,10 +21,6 @@ class ResistorColorDuo
                      "grey", 
                     "white"]
 
-
         "#{resistor.index(color[0])}#{resistor.index(color[1])}".to_i
-
-
     end
-    
 end
