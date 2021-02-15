@@ -11,7 +11,7 @@ class Raindrops
   end
 
   def factors
-    RAINDROPS.map { _2 if @value  % _1 == 0 }.compact.join
+    RAINDROPS.map { _2 if @value % _1 == 0 }.compact.join
   end
 
   def sound
