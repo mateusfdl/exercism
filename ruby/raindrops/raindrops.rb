@@ -16,6 +16,7 @@ class Raindrops
 
   def print_result
     return value.to_s if factors.empty?
+
     factors
   end
 
