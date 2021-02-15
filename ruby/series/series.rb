@@ -19,5 +19,4 @@ class Series
 
 	@string.each_cons(lenght).map(&:join)
   end
-
 end
