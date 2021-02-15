@@ -14,7 +14,7 @@ class Raindrops
     RAINDROPS.map { _2 if @value  % _1 == 0 }.compact.join
   end
 
-  def print_result
+  def sound
     return value.to_s if factors.empty?
 
     factors
@@ -25,7 +25,7 @@ class Raindrops
   class << self
 
     def convert(value)
-      new(value).print_result
+      new(value).sound
     end
   end
 end
