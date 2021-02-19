@@ -9,5 +9,8 @@ defmodule RnaTranscription do
   """
   @spec to_rna([char]) :: [char]
   def to_rna(dna) do
+  	nucleotides = %{"G" => "C", "C" => "G", "T" => "A", "A" => "U"}
+	
+  	Enum.map(dna, fn nucleotide -> nucleotides[nucleotide])
   end
 end
