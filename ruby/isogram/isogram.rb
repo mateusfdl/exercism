@@ -3,7 +3,6 @@ class Isogram
     def isogram?(input)
       new(input).isogram?
     end
-   
   end
 
   def initialize(words)
