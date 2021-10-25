@@ -5,9 +5,7 @@ import (
 )
 
 func Distance(a, b string) (int, error) {
-	a_bytes_slice, b_bytes_slice := []byte(a), []byte(b)
-
-	distance := 0
+	distance, a_bytes_slice, b_bytes_slice := 0, []byte(a), []byte(b)
 
 	if len(a) != len(b) {
 		return distance, errors.New("Ditances converge")
