@@ -11,20 +11,21 @@ import (
 )
 
 // Abbreviate should have a comment documenting it.
-var acronym []string
 
 func Abbreviate(s string) string {
+	acronym := ""
 
-	splitedSpaces := strings.Split(ReplaceNonAlpha(s), " ")
+	splitedSpaces := regexp.MustCompile(`[^-A-Za-z\s]`).ReplaceAllString(ReplaceNonAlpha(s), "")
 
-	for _, word := range splitedSpaces {
-		acronym = append(acronym, strings.ToUpper(word[0:1]))
+	for _, word := range strings.Split(splitedSpaces, " ") {
+		if len(strings.TrimSpace(word)) > 0 {
+			acronym += string(word[0])
+		}
 	}
 
-	return strings.Join(acronym, "")
+	return strings.ToUpper(acronym)
 }
 
 func ReplaceNonAlpha(s string) string {
-
 	return regexp.MustCompile(`[_/*-]`).ReplaceAllString(s, " ")
 }
