@@ -1,3 +1,4 @@
 haskell/**/package.yaml
 haskell/**/.stack-work/
 haskell/**/*.cabal
+javascript/**/node_modules
