@@ -6,8 +6,7 @@
 
 class Microwave
   def initialize(seconds)
-    @minutes = seconds / 100
-    @seconds = seconds % 100
+    @minutes, @seconds = seconds.divmod(100)
   end
 
   def timer
