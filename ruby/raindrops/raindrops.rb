@@ -1,12 +1,10 @@
 class Raindrops
-  class << self
-    def convert(value)
-      new(value).sound
-    end
+  def self.convert(value)
+    new(value).sound
   end
 
   attr_reader :value
-  
+
   RAINDROPS = {
     3 => 'Pling',
     5 => 'Plang',

@@ -1,10 +1,8 @@
-=begin
-Write your code for the 'High Scores' exercise in this file. Make the tests in
-`high_scores_test.rb` pass.
-
-To get started with TDD, see the `README.md` file in your
-`ruby/high-scores` directory.
-=end
+# Write your code for the 'High Scores' exercise in this file. Make the tests in
+# `high_scores_test.rb` pass.
+#
+# To get started with TDD, see the `README.md` file in your
+# `ruby/high-scores` directory.
 class HighScores
   attr_accessor :scores
 
@@ -13,12 +11,10 @@ class HighScores
   end
 
   def latest
-
     scores.last
   end
 
   def personal_best
-
     scores.max
   end
 

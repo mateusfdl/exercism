@@ -1,22 +1,15 @@
 class Series
-	private
+  private
 
-	attr_accessor :string
+  attr_accessor :string
 
-	def initialize(string)
-		
-		@string = string.chars
-  	end
+  def initialize(string)
+    @string = string.chars
+  end
 
-	public
+  def slices(lenght)
+    raise ArgumentError, 'Slices length cannot be longer than series length' unless lenght <= string.length
 
-	def slices(lenght)
-
-	unless lenght <= string.length
-
-		raise ArgumentError, 'Slices length cannot be longer than series length'
-	end
-
-	@string.each_cons(lenght).map(&:join)
+    string.each_cons(lenght).map(&:join)
   end
 end
