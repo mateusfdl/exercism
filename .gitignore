@@ -2,3 +2,6 @@ haskell/**/package.yaml
 haskell/**/.stack-work/
 haskell/**/*.cabal
 javascript/**/node_modules
+javascript/**/package-lock.json
+*/**/.exercism
+haskell/**/dist-newstyle
