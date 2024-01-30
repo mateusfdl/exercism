@@ -1,0 +1,7 @@
+cradle:
+  cabal:
+    - path: "test/Tests.hs"
+      component: "bob:test:test"
+
+    - path: "src/Bob.hs"
+      component: "lib:bob"
