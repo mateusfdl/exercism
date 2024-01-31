@@ -17,14 +17,7 @@ function M.latest()
 end
 
 function M.personal_best()
-  local unsorted = shallow_copy(M.__score)
-
-  table.sort(unsorted, function(a, b)
-    return a > b
-  end)
-
-
-  return unsorted[1]
+  return math.max(table.unpack(M.__score))
 end
 
 function M.personal_top_three()
