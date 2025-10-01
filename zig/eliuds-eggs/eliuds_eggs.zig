@@ -1,15 +1,10 @@
 const std: type = @import("std");
 
 pub fn eggCount(number: usize) usize {
-    var buffer: [@bitSizeOf(usize)]u8 = undefined;
-
-    const bin = std.fmt.bufPrint(&buffer, "{b}", .{number}) catch unreachable;
-
     var count: usize = 0;
+    var n = number;
 
-    for (bin) |bit| {
-        if (bit == '1') count += 1;
-    }
+    while (n != 0) : (n >>= 1) count += n & 1;
 
     return count;
 }
